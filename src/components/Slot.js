@@ -23,11 +23,14 @@ class Slot extends Component {
             if (slot.meets.length >= 10) {
                 className = "closed";
             }
+            let onclick = this.openMeetingForm;
             if (mine) {
                 className = "mine";
+                onclick = () => {
+                };
             }
             slotBody =
-                <div className={className} onClick={this.openMeetingForm}>
+                <div className={className} onClick={onclick}>
                     {slot.meets.length + " из 10"}
                 </div>;
         } else {
