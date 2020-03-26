@@ -1,41 +1,9 @@
-@font-face {
-    src: url("/src/assets/fonts/GoogleSans-Bold.ttf");
-    font-family: "GoogleSans";
-    font-weight: bold;
-}
-@font-face {
-    src: url("/src/assets/fonts/GoogleSans-BoldItalic.ttf");
-    font-family: "GoogleSans";
-    font-weight: bold;
-    font-style: italic;
-}
-@font-face {
-    src: url("/src/assets/fonts/GoogleSans-Italic.ttf");
-    font-family: "GoogleSans";
-    font-style: italic;
-}
-@font-face {
-    src: url("/src/assets/fonts/GoogleSans-Medium.ttf");
-    font-family: "GoogleSans";
-    font-weight: normal;
-}
-@font-face {
-    src: url("/src/assets/fonts/GoogleSans-MediumItalic.ttf");
-    font-family: "GoogleSans";
-    font-style: italic;
-    font-weight: normal;
-}
-@font-face {
-    src: url("/src/assets/fonts/GoogleSans-Regular.ttf");
-    font-family: "GoogleSans";
-    font-weight: normal;
-
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=cyrillic-ext');
 
 
 body{
     margin: 0;
-    font-family: "GoogleSans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .f_norm{
