@@ -8,3 +8,8 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+
+.btn_add{
+    margin-bottom: 40px;
+}
