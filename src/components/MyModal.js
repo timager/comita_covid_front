@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Modal from 'react-modal';
-import {closeModal, openModal, setClose, setOpen} from "../modal_fix";
+import {setClose, setOpen} from "../modal_fix";
 Modal.setAppElement('#root');
 const customStyles = {
     content : {

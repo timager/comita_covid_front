@@ -1,0 +1,32 @@
+.user_form{
+    color: white;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 50px;
+    background-color: var(--blue);
+}
+
+.user_form input{
+    color: black;
+}
+
+.user_form label{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.user_form .access_label{
+    justify-content: left;
+}
+
+.user_form .access_label input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+}
+
+.user_form > div{
+    margin: auto;
+}

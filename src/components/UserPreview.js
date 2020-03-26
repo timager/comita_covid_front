@@ -4,6 +4,8 @@ import {faPhone, faEdit, faTrash} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import {BASE_URL} from "../const";
+import {openModal} from "../modal_fix";
+import UserForm from "./UserForm";
 
 class UserPreview extends Component {
     constructor(props) {
@@ -21,7 +23,7 @@ class UserPreview extends Component {
                     <p><FontAwesomeIcon icon={faPhone}/> {user['phone']}</p>
                 </div>
                 <div>
-                    <FontAwesomeIcon className={"min_btn green"} icon={faEdit}/>
+                    <FontAwesomeIcon onClick={()=>openModal(<UserForm user={user}/>)} className={"min_btn green"} icon={faEdit}/>
                     <br/>
                     <FontAwesomeIcon onClick={this.deleteHandler} className={"min_btn red"} icon={faTrash}/>
                 </div>
