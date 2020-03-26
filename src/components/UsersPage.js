@@ -11,6 +11,7 @@ class UsersPage extends Component {
         this.state = {
             users: null
         };
+        this.loadUsers = this.loadUsers.bind(this);
     }
 
     componentDidMount() {
@@ -18,9 +19,10 @@ class UsersPage extends Component {
     }
 
     loadUsers() {
+        let self = this;
         axios.post(BASE_URL + "/api/users/get").then(res => {
                 this.setState({users: res['data']});
-                console.log(this.state.users)
+                console.log(self.state.users)
             }
         )
     }
