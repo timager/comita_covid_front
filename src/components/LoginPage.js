@@ -5,6 +5,12 @@ import axios from "axios";
 import Input from "./Input";
 
 class LoginPage extends Component {
+
+    constructor(props) {
+        super(props);
+        this.loginClick = this.loginClick.bind(this);
+    }
+
     render() {
         return (
             <div className={"login_page"}>
