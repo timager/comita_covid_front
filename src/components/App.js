@@ -9,6 +9,7 @@ import UsersPage from "./UsersPage";
 import HomePage from "./HomePage";
 import UserForm from "./UserForm";
 import MyModal from "./MyModal";
+import MeetingsPage from "./MeetingsPage";
 
 
 function App() {
@@ -18,9 +19,6 @@ function App() {
             </MyModal>
             <Router>
                 <Switch>
-                    <Route path="/meetings">
-                        789
-                    </Route>
                     <Route exact path="/login">
                         <LoginPage/>
                     </Route>
@@ -31,7 +29,7 @@ function App() {
                         <UsersPage/>
                     </Route>
                     <Route path="/meetings">
-                        789
+                        <MeetingsPage/>
                     </Route>
                 </Switch>
             </Router>

@@ -20,3 +20,7 @@ body {
 .f_bold {
     font-weight: bold;
 }
+
+body.react-confirm-alert-body-element{
+    overflow: auto;
+}

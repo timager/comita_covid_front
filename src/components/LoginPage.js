@@ -4,6 +4,7 @@ import Button from "./Button";
 import axios from "axios";
 import Input from "./Input";
 import {BASE_URL} from "../const";
+import {confirmAlert} from "react-confirm-alert";
 
 class LoginPage extends Component {
 
@@ -49,7 +50,17 @@ class LoginPage extends Component {
             .then(res => {
                 console.log(res)
             })
-            .catch()
+            .catch(
+                e => confirmAlert({
+                    title: 'Ошибка авторизации',
+                    message: '(' + e.message + ')',
+                    buttons: [
+                        {
+                            label: 'Ок'
+                        }
+                    ]
+                })
+            )
     }
 }
 

@@ -1,0 +1,30 @@
+.meetings_page {
+    padding: 60px 80px 100px;
+}
+
+.meetings_page .blue_text{
+    margin-top: 0;
+    text-align: center;
+}
+
+.meetings_page .blue_text span{
+    color: var(--blue);
+}
+
+.meetings_page .header {
+    margin-bottom: 0;
+    text-align: left;
+    font-weight: bold;
+    font-size: 25px;
+    color: red;
+}
+
+.slots_header{
+    text-align: center;
+    color: var(--blue);
+    text-transform: uppercase;
+}
+
+.slots_list{
+    display: flex;
+}

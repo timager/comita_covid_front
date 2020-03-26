@@ -1,0 +1,15 @@
+.slot .slot_header {
+    background-color: var(--blue);
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.slot .slot_header div {
+    padding: 20px 5px;
+    border-left: 1px solid white;
+}
+
+.slot:first-child .slot_header div {
+    border-left: none;
+}

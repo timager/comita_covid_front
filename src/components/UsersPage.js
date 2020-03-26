@@ -42,7 +42,7 @@ class UsersPage extends Component {
             <div className={"users_page"}>
                 <p className={"f_large f_bold"}>Настройка пользователей</p>
                 <Button onClick={() => {
-                    openModal(<UserForm/>)
+                    openModal(<UserForm loadUsers={this.loadUsers}/>)
                 }} className={"btn_add"}>Добавить пользователя</Button>
                 <div className={"users_list"}>
                     {users}

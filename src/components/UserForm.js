@@ -62,6 +62,9 @@ class UserForm extends Component {
     }
 
     saveHandler() {
+        if (!this.state.access) {
+            this.setState({access: false})
+        }
         let url = BASE_URL + "/api/users/add";
         if (this.state.id) {
             url = BASE_URL + "/api/users/" + this.state.id + "/edit";
