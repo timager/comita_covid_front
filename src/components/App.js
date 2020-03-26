@@ -10,6 +10,7 @@ import HomePage from "./HomePage";
 import UserForm from "./UserForm";
 import MyModal from "./MyModal";
 import MeetingsPage from "./MeetingsPage";
+import Security from "./Security";
 
 
 function App() {
@@ -22,15 +23,22 @@ function App() {
                     <Route exact path="/login">
                         <LoginPage/>
                     </Route>
-                    <Route exact path="/">
-                        <HomePage/>
-                    </Route>
-                    <Route path="/users">
-                        <UsersPage/>
-                    </Route>
-                    <Route path="/meetings">
-                        <MeetingsPage/>
-                    </Route>
+                    <Security>{
+                        user => {
+                            return (<>
+                                <Route exact path="/">
+                                    <HomePage/>
+                                </Route>
+                                <Route path="/users">
+                                    <UsersPage currentUser={user}/>
+                                </Route>
+                                <Route path="/meetings">
+                                    <MeetingsPage currentUser={user}/>
+                                </Route>
+                            </>);
+                        }
+                    }
+                    </Security>
                 </Switch>
             </Router>
         </>

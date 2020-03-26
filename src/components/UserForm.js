@@ -86,7 +86,7 @@ class UserForm extends Component {
         ).catch(
             e => confirmAlert({
                 title: 'Ошибка',
-                message: 'Что-то пошло не так (' + e.message + ')',
+                message: e.response.data,
                 buttons: [
                     {
                         label: 'Ок'

@@ -25,7 +25,10 @@ class UserPreview extends Component {
                     <p><FontAwesomeIcon icon={faPhone}/> {user['phone']}</p>
                 </div>
                 <div>
-                    <FontAwesomeIcon onClick={() => openModal(<UserForm loadUsers={this.props.loadUsers} user={user}/>)} className={"min_btn green"}
+                    <FontAwesomeIcon onClick={() => {
+                        openModal(<UserForm loadUsers={this.props.loadUsers} user={user}/>)
+                    }
+                    } className={"min_btn green"}
                                      icon={faEdit}/>
                     <br/>
                     <FontAwesomeIcon onClick={this.deleteHandler} className={"min_btn red"} icon={faTrash}/>
@@ -42,7 +45,17 @@ class UserPreview extends Component {
                 {
                     label: 'Да',
                     onClick: () => axios.post(BASE_URL + "/api/users/" + this.props.user.id + "/delete")
-                        .then(res => this.props.loadUsers())
+                        .then(res => this.props.loadUsers()).catch(
+                            e => confirmAlert({
+                                title: 'Ошибка',
+                                message: e.response.data,
+                                buttons: [
+                                    {
+                                        label: 'Ок'
+                                    }
+                                ]
+                            })
+                        )
                 },
                 {
                     label: 'Отмена'

@@ -53,7 +53,7 @@ class LoginPage extends Component {
             .catch(
                 e => confirmAlert({
                     title: 'Ошибка авторизации',
-                    message: '(' + e.message + ')',
+                    message: "Неверные данные для входа",
                     buttons: [
                         {
                             label: 'Ок'

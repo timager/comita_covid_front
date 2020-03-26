@@ -21,6 +21,7 @@ class MyModal extends Component {
             isOpen: false,
             content: ""
         };
+
         this.open = this.open.bind(this);
         this.close = this.close.bind(this);
         setOpen(this.open);
