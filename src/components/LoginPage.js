@@ -3,6 +3,7 @@ import "./../assets/css/LoginPage.css";
 import Button from "./Button";
 import axios from "axios";
 import Input from "./Input";
+import {BASE_URL} from "../const";
 
 class LoginPage extends Component {
 
@@ -44,7 +45,7 @@ class LoginPage extends Component {
     }
 
     loginClick() {
-        axios.post("http://192.168.0.184/api/login", {username: this.state.login, password: this.state.pass})
+        axios.post(BASE_URL + "/api/login", {username: this.state.login, password: this.state.pass})
             .then(res => {
                 console.log(res)
             })

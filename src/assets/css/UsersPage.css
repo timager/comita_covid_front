@@ -1,0 +1,10 @@
+.users_page{
+    padding: 0 80px 100px;
+    text-align: center;
+}
+
+.users_page .users_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

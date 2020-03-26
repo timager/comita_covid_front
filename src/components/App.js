@@ -5,6 +5,7 @@ import {
     Route,
 } from "react-router-dom";
 import LoginPage from "./LoginPage";
+import UsersPage from "./UsersPage";
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
                     <LoginPage/>
                 </Route>
                 <Route path="/users">
-                    456
+                    <UsersPage/>
                 </Route>
                 <Route path="/meetings">
                     789

@@ -1,0 +1,28 @@
+.user_preview {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--blue);
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user_preview .user_data{
+    text-align: left;
+}
+
+.user_preview:hover{
+    background-color: #f7f7f7;
+}
+.min_btn{
+    cursor: pointer;
+    margin: 5px;
+}
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}
