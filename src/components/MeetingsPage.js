@@ -3,7 +3,6 @@ import "./../assets/css/MeetingsPage.css";
 import axios from "axios";
 import {BASE_URL} from "../const";
 import Loader from "react-loader-spinner";
-import UserPreview from "./UserPreview";
 import Slot from "./Slot";
 
 class MeetingsPage extends Component {
@@ -11,7 +10,8 @@ class MeetingsPage extends Component {
         super(props);
         this.state = {
             slots: null
-        }
+        };
+        this.loadSlots = this.loadSlots.bind(this);
     }
 
     componentDidMount() {
@@ -19,8 +19,9 @@ class MeetingsPage extends Component {
     }
 
     loadSlots() {
+        let self = this;
         axios.post(BASE_URL + "/api/slots/get").then(
-            res => this.setState({slots: res['data']})
+            res => self.setState({slots: res['data']})
         )
     }
 

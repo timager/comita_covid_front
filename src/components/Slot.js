@@ -1,32 +1,37 @@
 import React, {Component} from "react";
 import "./../assets/css/Slot.css";
+import {openModal} from "../modal_fix";
+import MeetingsForm from "./MeetingsForm";
 
 class Slot extends Component {
+    constructor(props) {
+        super(props);
+        this.openMeetingForm = this.openMeetingForm.bind(this);
+    }
+
     render() {
         let slot = this.props.slot;
-        console.log(slot);
-        let slotBody = <div className={"available"}/>;
-        if (!slot['is_actual']) {
-            if (slot.meets.length > 0) {
-                slotBody =
-                    <div className={slot.meets.length >= 10 ? "closed" : "available"}>
-                        {slot.meets.length + " из 10"}
-                    </div>;
-                let mine = false;
-                slot.meets.forEach(meet => {
-                    if (/*meet['guest']['id'] === this.props.currentUser['id']*/true) {
-                        mine = true;
-                    }
-                });
-                if (mine) {
-                    slotBody =
-                        <div className={"mine"}>
-                            {slot.meets.length + " из 10"}
-                        </div>
+        let slotBody = '';
+        if (slot['is_actual']) {
+            let mine = false;
+            slot.meets.forEach(meet => {
+                if (meet['guest']['id'] === this.props.currentUser['id']) {
+                    mine = true;
                 }
+            });
+            let className = "available";
+            if (slot.meets.length >= 10) {
+                className = "closed";
             }
+            if (mine) {
+                className = "mine";
+            }
+            slotBody =
+                <div className={className} onClick={this.openMeetingForm}>
+                    {slot.meets.length + " из 10"}
+                </div>;
         } else {
-            slotBody = <div className={"timeout"}/>;
+            slotBody = <div className={"timeout"}>X</div>;
         }
 
         return (
@@ -39,6 +44,10 @@ class Slot extends Component {
                 </div>
             </div>
         );
+    }
+
+    openMeetingForm() {
+        openModal(<MeetingsForm slot={this.props.slot} loadSlots={this.props.loadSlots}/>)
     }
 }
 

@@ -23,22 +23,22 @@ function App() {
                     <Route exact path="/login">
                         <LoginPage/>
                     </Route>
-                    <Security>{
-                        user => {
-                            return (<>
+                    {/*<Security>{*/}
+                    {/*    user => {*/}
+                    {/*        return (<>*/}
                                 <Route exact path="/">
                                     <HomePage/>
                                 </Route>
                                 <Route path="/users">
-                                    <UsersPage currentUser={user}/>
+                                    <UsersPage currentUser={null}/>
                                 </Route>
                                 <Route path="/meetings">
-                                    <MeetingsPage currentUser={user}/>
+                                    <MeetingsPage currentUser={null}/>
                                 </Route>
-                            </>);
-                        }
-                    }
-                    </Security>
+                    {/*        </>);*/}
+                    {/*    }*/}
+                    {/*}*/}
+                    {/*</Security>*/}
                 </Switch>
             </Router>
         </>

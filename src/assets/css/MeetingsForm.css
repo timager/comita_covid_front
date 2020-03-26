@@ -1,0 +1,45 @@
+.meetings_form {
+    color: white;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 50px;
+    background-color: var(--blue);
+}
+
+.meetings_form input {
+    color: black;
+}
+
+.meetings_form label {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.meetings_form .access_label {
+    justify-content: left;
+}
+
+.meetings_form .access_label input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+}
+
+.meetings_form > div {
+    margin: auto;
+}
+
+.meetings_form select {
+    padding: 15px 30px;
+    color: black;
+    background-color: white;
+    border: none;
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+}
