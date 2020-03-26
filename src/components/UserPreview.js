@@ -25,7 +25,7 @@ class UserPreview extends Component {
                     <p><FontAwesomeIcon icon={faPhone}/> {user['phone']}</p>
                 </div>
                 <div>
-                    <FontAwesomeIcon onClick={() => openModal(<UserForm user={user}/>)} className={"min_btn green"}
+                    <FontAwesomeIcon onClick={() => openModal(<UserForm loadUsers={this.props.loadUsers} user={user}/>)} className={"min_btn green"}
                                      icon={faEdit}/>
                     <br/>
                     <FontAwesomeIcon onClick={this.deleteHandler} className={"min_btn red"} icon={faTrash}/>
