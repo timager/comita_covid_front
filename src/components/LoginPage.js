@@ -9,6 +9,10 @@ class LoginPage extends Component {
     constructor(props) {
         super(props);
         this.loginClick = this.loginClick.bind(this);
+        this.state = {
+            login: null,
+            pass: null
+        }
     }
 
     render() {
@@ -19,7 +23,9 @@ class LoginPage extends Component {
                     <p className={"f_norm"}>Brainstorming</p>
                     <p className={"f_large f_bold"}>Преодоление COVID-19</p>
                     <p className={"f_large f_bold"}>для индустрии транспорта</p>
-                    <a target={"_blank"} href={"http://live.covid-transport.ru/symfony/public/Covid-2020-rus.pdf"}><Button className={"conf_button"}>Программа конференции</Button></a>
+                    <a target={"_blank"}
+                       href={"http://live.covid-transport.ru/symfony/public/Covid-2020-rus.pdf"}><Button
+                        className={"conf_button"}>Программа конференции</Button></a>
                 </div>
                 <div className={"login_form"}>
                     <p className={"f_large f_bold"}>Добро пожаловать в прямой эфир</p>
@@ -38,10 +44,11 @@ class LoginPage extends Component {
     }
 
     loginClick() {
-        axios.post(axios.defaults.baseURL + "/api/login", {login: this.state.login, pass: this.state.pass})
+        axios.post("http://192.168.0.184/api/login", {username: this.state.login, password: this.state.pass})
             .then(res => {
                 console.log(res)
             })
+            .catch()
     }
 }
 
