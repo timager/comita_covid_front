@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Modal from 'react-modal';
 import {closeModal, openModal, setClose, setOpen} from "../modal_fix";
-
+Modal.setAppElement('#root');
 const customStyles = {
     content : {
         top                   : '50%',
@@ -44,6 +44,7 @@ class MyModal extends Component {
     render() {
         return (
             <Modal
+                onRequestClose={this.close}
                 style={customStyles}
                 isOpen={this.state.isOpen}>
                 {this.state.content}
