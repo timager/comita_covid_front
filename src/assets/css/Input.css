@@ -1,15 +1,16 @@
-.default_button {
-    cursor: pointer;
+.default_input{
     border-radius: 30px;
     padding: 15px 30px;
     color: black;
-    background-color: var(--yellow);
+    background-color: white;
     border: none;
+    width: 200px;
     margin-right: 10px;
     margin-left: 10px;
+    text-align: center;
     text-transform: uppercase;
 }
 
-.default_button:hover{
-    background-color: #ffda09;
+.default_input::placeholder{
+    color: black;
 }

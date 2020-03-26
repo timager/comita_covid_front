@@ -1,24 +1,25 @@
 .login_page {
-    background-color: #001bdf;
+    background-color: var(--blue);
     padding: 60px 80px 100px;
     color: white;
 }
 
-.login_page .header{
+.login_page .header {
     text-align: left;
     font-weight: bold;
     font-size: 30px;
 }
 
-.login_page .center_text{
+.login_page .center_text {
     text-align: center;
     text-transform: uppercase;
 }
 
-.login_page .center_text p{
+.login_page .center_text p {
     margin-bottom: 20px;
+    margin-top: 0;
 }
 
-.login_page .login_form p{
+.login_page .login_form {
     text-align: center;
 }

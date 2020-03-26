@@ -1,19 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=cyrillic-ext');
 
 
-body{
+body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    --blue: #001bdf;
+    --yellow: #ffbc0e;
 }
 
-.f_norm{
+
+.f_norm {
     font-size: 20px;
 }
 
-.f_large{
+.f_large {
     font-size: 40px;
 }
 
-.f_bold{
+.f_bold {
     font-weight: bold;
 }

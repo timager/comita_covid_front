@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "./../assets/css/LoginPage.css";
 import Button from "./Button";
+import Input from "./Input";
 
 class LoginPage extends Component {
     render() {
@@ -16,8 +17,8 @@ class LoginPage extends Component {
                 <div className={"login_form"}>
                     <p className={"f_large f_bold"}>Добро пожаловать в прямой эфир</p>
                     <div>
-                        <input type={"text"}/>
-                        <input type={"password"}/>
+                        <Input type={"text"} placeholder={"логин"}/>
+                        <Input type={"password"} placeholder={"пароль"}/>
                         <Button>Войти</Button>
                     </div>
                 </div>
