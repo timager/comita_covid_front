@@ -1,10 +1,28 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import LoginPage from "./LoginPage";
+
 
 function App() {
     return (
-        <div className="App">
-
-        </div>
+        <Router>
+            <Switch>
+                <Route exact path="/login">
+                    <LoginPage/>
+                </Route>
+                <Route path="/users">
+                    456
+                </Route>
+                <Route path="/meetings">
+                    789
+                </Route>
+            </Switch>
+        </Router>
     );
 }
 
