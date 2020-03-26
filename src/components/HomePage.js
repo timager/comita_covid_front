@@ -74,7 +74,7 @@ class HomePage extends Component {
                         </div>
                     </div>
                 </div>
-                <div class="c-tab tab-1 is-active">
+                <div class="c-tab tSab-1 is-active">
                     <div class="video">
                         <div class="container">
 <!--                            <iframe src="" frameborder="0"></iframe>-->

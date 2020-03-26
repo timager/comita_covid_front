@@ -6,6 +6,8 @@ import axios from "axios";
 import {BASE_URL} from "../const";
 import {openModal} from "../modal_fix";
 import UserForm from "./UserForm";
+import {confirmAlert} from 'react-confirm-alert'; // Import
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 class UserPreview extends Component {
     constructor(props) {
@@ -23,7 +25,8 @@ class UserPreview extends Component {
                     <p><FontAwesomeIcon icon={faPhone}/> {user['phone']}</p>
                 </div>
                 <div>
-                    <FontAwesomeIcon onClick={()=>openModal(<UserForm user={user}/>)} className={"min_btn green"} icon={faEdit}/>
+                    <FontAwesomeIcon onClick={() => openModal(<UserForm user={user}/>)} className={"min_btn green"}
+                                     icon={faEdit}/>
                     <br/>
                     <FontAwesomeIcon onClick={this.deleteHandler} className={"min_btn red"} icon={faTrash}/>
                 </div>
@@ -32,8 +35,20 @@ class UserPreview extends Component {
     }
 
     deleteHandler() {
-        axios.post(BASE_URL + "/api/users/" + this.props.user.id + "/delete")
-            .then(res => this.props.loadUsers())
+        confirmAlert({
+            title: 'Удаление',
+            message: 'Вы уверены что хотите удалить этого пользователя?',
+            buttons: [
+                {
+                    label: 'Да',
+                    onClick: () => axios.post(BASE_URL + "/api/users/" + this.props.user.id + "/delete")
+                        .then(res => this.props.loadUsers())
+                },
+                {
+                    label: 'Отмена'
+                }
+            ]
+        });
     }
 
 }
