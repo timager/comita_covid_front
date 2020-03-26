@@ -5,6 +5,7 @@ import Loader from 'react-loader-spinner';
 import UserPreview from "./UserPreview";
 import "./../assets/css/UsersPage.css";
 import Button from "./Button";
+import {openModal} from "../modal_fix";
 
 class UsersPage extends Component {
     constructor(props) {
@@ -39,7 +40,7 @@ class UsersPage extends Component {
         return (
             <div className={"users_page"}>
                 <p className={"f_large f_bold"}>Настройка пользователей</p>
-                <Button className={"btn_add"}>Добавить пользователя</Button>
+                <Button onClick={()=>{openModal("я пользователь, бляд")}} className={"btn_add"}>Добавить пользователя</Button>
                 <div className={"users_list"}>
                     {users}
                 </div>

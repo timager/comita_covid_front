@@ -6,23 +6,29 @@ import {
 } from "react-router-dom";
 import LoginPage from "./LoginPage";
 import UsersPage from "./UsersPage";
+import MyModal from "./MyModal";
 
 
 function App() {
     return (
-        <Router>
-            <Switch>
-                <Route exact path="/login">
-                    <LoginPage/>
-                </Route>
-                <Route path="/users">
-                    <UsersPage/>
-                </Route>
-                <Route path="/meetings">
-                    789
-                </Route>
-            </Switch>
-        </Router>
+        <>
+            <MyModal>
+            </MyModal>
+
+            <Router>
+                <Switch>
+                    <Route exact path="/login">
+                        <LoginPage/>
+                    </Route>
+                    <Route path="/users">
+                        <UsersPage/>
+                    </Route>
+                    <Route path="/meetings">
+                        789
+                    </Route>
+                </Switch>
+            </Router>
+        </>
     );
 }
 
