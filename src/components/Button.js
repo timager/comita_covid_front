@@ -4,7 +4,7 @@ import "./../assets/css/Button.css";
 class Button extends Component {
     render() {
         return (
-            <button className={"default_button f_norm"}>{this.props.children}</button>
+            <button className={"default_button f_norm "+this.props.className}>{this.props.children}</button>
         );
     }
 }

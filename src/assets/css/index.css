@@ -4,13 +4,13 @@
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    --blue: #001bdf;
-    --yellow: #ffbc0e;
+    --blue: #1546af;
+    --yellow: #ffc80b;
 }
 
 
 .f_norm {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .f_large {

@@ -12,7 +12,7 @@ class LoginPage extends Component {
                     <p className={"f_norm"}>Brainstorming</p>
                     <p className={"f_large f_bold"}>Преодоление COVID-19</p>
                     <p className={"f_large f_bold"}>для индустрии транспорта</p>
-                    <Button>Программа конференции</Button>
+                    <Button className={"conf_button"}>Программа конференции</Button>
                 </div>
                 <div className={"login_form"}>
                     <p className={"f_large f_bold"}>Добро пожаловать в прямой эфир</p>

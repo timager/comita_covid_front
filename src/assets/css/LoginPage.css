@@ -23,3 +23,8 @@
 .login_page .login_form {
     text-align: center;
 }
+
+.conf_button {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
