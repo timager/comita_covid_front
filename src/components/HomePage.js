@@ -134,7 +134,7 @@ class HomePage extends Component {
                 </div>
                 <div class="title center">
                     <h2>Организация личных online встреч</h2>
-                    <button class="button center">забронировать</button>
+                    <a href="/meetings"><button class="button center">забронировать</button></a>
                 </div>
                 <div class="faq">
                     <div class="title center">

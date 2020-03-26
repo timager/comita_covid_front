@@ -1,0 +1,58 @@
+@media (max-width: 1024px) {
+    .login_form input {
+        margin-bottom: 20px;
+    }
+
+    .user_form {
+        width: initial;
+    }
+
+    .slots_list {
+        flex-wrap: wrap;
+    }
+
+    .slot {
+        display: flex;
+    }
+
+    .slot .slot_header > div {
+        text-align: center;
+        border: 1px solid var(--blue);
+    }
+
+    .slot:first-child .slot_header div {
+        border-left: 1px solid var(--blue);
+    }
+
+    .slot .slot_header {
+        background: none;
+        color: black;
+    }
+
+    .slot .slot_body {
+        height: auto;
+    }
+
+    .slot .slot_body > div {
+        height: auto;
+        width: 200px;
+    }
+
+    .meetings_form {
+        width: 300px;
+    }
+
+    .meetings_page, .users_page, .login_page {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .react-confirm-alert-body {
+        width: 250px;
+    }
+
+    .user_form label {
+        width: auto;
+        flex-wrap: wrap;
+    }
+}

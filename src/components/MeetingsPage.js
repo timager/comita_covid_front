@@ -35,6 +35,8 @@ class MeetingsPage extends Component {
         return (
             <div className={"meetings_page"}>
                 <p className={"f_norm f_bold header"}>ATO EVENTS</p>
+                {this.props.currentUser.role === 'ROLE_ADMIN' ?
+                    <a className={"f_bold f_norm"} href={"/users"}>Перейти к настройкам</a> : ''}
                 <p className={"f_large f_bold blue_text"}><span>Организация личных</span> онлайн встреч</p>
 
                 <div className={"slots"}>

@@ -15,7 +15,7 @@ class Slot extends Component {
         if (slot['is_actual']) {
             let mine = false;
             slot.meets.forEach(meet => {
-                if (meet['guest']['id'] === this.props.currentUser['id']) {
+                if (/*meet['guest']['id'] === this.props.currentUser['id']*/true) {
                     mine = true;
                 }
             });
