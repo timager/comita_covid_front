@@ -42,6 +42,10 @@
     cursor: pointer;
 }
 
+.slot .slot_body .available:hover {
+    background-color: #3860ff;
+}
+
 .slot .slot_body .mine {
     background-color: var(--yellow);
 }
