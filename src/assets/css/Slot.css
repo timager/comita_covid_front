@@ -13,3 +13,35 @@
 .slot:first-child .slot_header div {
     border-left: none;
 }
+
+.slot .slot_body {
+    height: 100px;
+    margin: 10px;
+}
+
+.slot .slot_body > div {
+    height: 100px;
+    vertical-align: center;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 7;
+}
+
+
+.slot .slot_body .timeout {
+    background-color: #d4d4d4;
+}
+
+.slot .slot_body .closed {
+    background-color: red;
+}
+
+.slot .slot_body .available {
+    background-color: var(--blue);
+    cursor: pointer;
+}
+
+.slot .slot_body .mine {
+    background-color: var(--yellow);
+}
