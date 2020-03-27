@@ -11,7 +11,7 @@ class UserForm extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {...this.props.user};
+        this.state = Object.assign({access: false}, this.props.user);
         this.saveHandler = this.saveHandler.bind(this);
     }
 
@@ -62,9 +62,6 @@ class UserForm extends Component {
     }
 
     saveHandler() {
-        if (!this.state.access) {
-            this.setState({access: false})
-        }
         let url = BASE_URL + "/api/users/add";
         if (this.state.id) {
             url = BASE_URL + "/api/users/" + this.state.id + "/edit";

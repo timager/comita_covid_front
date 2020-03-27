@@ -18,6 +18,9 @@ class Slot extends Component {
                 if (meet['guest']['id'] === this.props.currentUser['id']) {
                     mine = true;
                 }
+                if (meet['creator']['id'] === this.props.currentUser['id']) {
+                    mine = true;
+                }
             });
             let className = "available";
             if (slot.meets.length >= 10) {

@@ -48,10 +48,10 @@ class LoginPage extends Component {
     loginClick() {
         axios.post(BASE_URL + "/api/login", {username: this.state.login, password: this.state.pass})
             .then(res => {
-                console.log(res)
+                window.location.href = "/";
             })
             .catch(
-                e => confirmAlert({
+                e => {console.log(e);   confirmAlert({
                     title: 'Ошибка авторизации',
                     message: "Неверные данные для входа",
                     buttons: [
@@ -59,7 +59,7 @@ class LoginPage extends Component {
                             label: 'Ок'
                         }
                     ]
-                })
+                })}
             )
     }
 }

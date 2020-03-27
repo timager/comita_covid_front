@@ -12,7 +12,6 @@ import MyModal from "./MyModal";
 import MeetingsPage from "./MeetingsPage";
 import Security from "./Security";
 
-
 function App() {
     return (
         <>
@@ -23,22 +22,22 @@ function App() {
                     <Route exact path="/login">
                         <LoginPage/>
                     </Route>
-                    {/*<Security>{*/}
-                    {/*    user => {*/}
-                    {/*        return (<>*/}
+                    <Security>{
+                        user => {
+                            return (<>
                                 <Route exact path="/">
                                     <HomePage/>
                                 </Route>
                                 <Route path="/users">
-                                    <UsersPage currentUser={null}/>
+                                    <UsersPage/>
                                 </Route>
                                 <Route path="/meetings">
-                                    <MeetingsPage currentUser={null}/>
+                                    <MeetingsPage currentUser={user}/>
                                 </Route>
-                    {/*        </>);*/}
-                    {/*    }*/}
-                    {/*}*/}
-                    {/*</Security>*/}
+                            </>);
+                        }
+                    }
+                    </Security>
                 </Switch>
             </Router>
         </>

@@ -1,7 +1,5 @@
 import React, {Component} from "react";
 import axios from "axios";
-import {closeModal} from "../modal_fix";
-import {confirmAlert} from "react-confirm-alert";
 import {BASE_URL} from "../const";
 import Loader from "react-loader-spinner";
 
@@ -20,13 +18,13 @@ class Security extends Component {
                 this.setState({user:res.data})
             }
         ).catch(
-            e => window.location.href = "/login"
+            e => {console.log(e);window.location.href = "/login"}
         )
     }
 
     render() {
         if(this.state.user){
-            this.props.children(this.state.user)
+            return this.props.children(this.state.user)
         }else{
             return <Loader type="Oval" width={200} height={200}/>
         }
