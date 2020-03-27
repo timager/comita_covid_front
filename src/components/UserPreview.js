@@ -29,8 +29,7 @@ class UserPreview extends Component {
                     <FontAwesomeIcon onClick={() => {
                         openModal(<UserForm loadUsers={this.props.loadUsers} user={user}/>)
                     }
-                    } className={"min_btn green"}
-                                     icon={faEdit}/>
+                    } className={"min_btn green"} icon={faEdit}/>
                     <br/>
                     <FontAwesomeIcon onClick={this.deleteHandler} className={"min_btn red"} icon={faTrash}/>
                     <FontAwesomeIcon onClick={this.recoverPassword} className={"min_btn blue"} icon={faKey}/>
@@ -92,8 +91,6 @@ class UserPreview extends Component {
             ]
         });
     }
-
-
 
 
 }
