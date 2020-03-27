@@ -35,6 +35,7 @@ class MeetingsPage extends Component {
         }
         return (
             <div className={"meetings_page"}>
+                <a style={{margin: "15px 15px 15px 95%", color:"black"}}href="/api/logout">Выйти</a>
                 <p className={"f_norm f_bold header"}>ATO EVENTS</p>
                 {this.props.currentUser.role === 'ROLE_ADMIN' ?
                     <a className={"f_bold f_norm"} href={"/users"}>Перейти к настройкам</a> : ''}

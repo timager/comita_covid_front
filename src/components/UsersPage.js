@@ -40,6 +40,7 @@ class UsersPage extends Component {
         }
         return (
             <div className={"users_page"}>
+                <a style={{margin: "15px 15px 15px 95%", color:"black"}} href="/api/logout">Выйти</a>
                 <p className={"f_large f_bold"}>Настройка пользователей</p>
                 <Button onClick={() => {
                     openModal(<UserForm loadUsers={this.loadUsers}/>)

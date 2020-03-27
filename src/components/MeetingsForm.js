@@ -13,16 +13,32 @@ class MeetingsForm extends Component {
         super(props);
         this.state = {
             users: null,
-            companion: null
+            companion: null,
+            air: false,
+            airport: false,
+            transport: false
         };
         this.sendInvite = this.sendInvite.bind(this);
+        this.getUsers = this.getUsers.bind(this);
     }
 
     componentDidMount() {
+        this.getUsers();
+    }
+
+    getUsers(){
         let self = this;
-        axios.post(BASE_URL + "/api/users/get").then(res => {
-                this.setState({users: res['data']});
-                console.log(self.state.users)
+        let data = {
+            air:self.state.air,
+            airport:self.state.airport,
+            transport:self.state.transport
+        };
+        axios.post(BASE_URL + "/api/users/get", data).then(res => {
+            self.setState({users: res['data']});
+            if(res['data'].length > 0){
+                self.setState({companion: res['data'][0].id});
+            }
+                // console.log(self.state.users)
             }
         )
     }
@@ -30,14 +46,32 @@ class MeetingsForm extends Component {
     render() {
         let select = <Loader type="Oval" width={200} height={50}/>;
         if (this.state.users) {
-            select = <select onChange={e => this.setState({companion: e.target.value})}>
-                {this.state.users.map(user => <UserSelectOption user={user}/>)}
+            select = <select onChange={event => {this.setState({companion: event.target.value})}}>
+                {this.state.users.map((user, id) => {return <UserSelectOption user={user}/>})}
             </select>
         }
         return (
             <div className={"meetings_form"}>
                 <p>Встреча на {this.props.slot['time']}</p>
                 <label>с {select}</label>
+                <label className={"access_label"}>авиакомпании
+                    <input type={"checkbox"} checked={this.state.air}
+                           onChange={e => {
+                               this.setState({air: e.target.checked}, ()=>{this.getUsers();})
+                           }}/>
+                </label>
+                <label className={"access_label"}>аэропорты
+                    <input type={"checkbox"} checked={this.state.airport}
+                           onChange={e => {
+                               this.setState({airport: e.target.checked}, ()=>{this.getUsers();})
+                           }}/>
+                </label>
+                <label className={"access_label"}>поток: грузовой транспорт
+                    <input type={"checkbox"} checked={this.state.transport}
+                           onChange={e => {
+                               this.setState({transport: e.target.checked}, ()=>{this.getUsers();})
+                           }}/>
+                </label>
                 <Button onClick={this.sendInvite}>Пригласить</Button>
             </div>
         );

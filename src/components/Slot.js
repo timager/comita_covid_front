@@ -14,12 +14,15 @@ class Slot extends Component {
         let slotBody = '';
         if (slot['is_actual']) {
             let mine = false;
+            let mineMeet = null;
             slot.meets.forEach(meet => {
                 if (meet['guest']['id'] === this.props.currentUser['id']) {
                     mine = true;
+                    mineMeet = meet;
                 }
                 if (meet['creator']['id'] === this.props.currentUser['id']) {
                     mine = true;
+                    mineMeet = meet;
                 }
             });
             let className = "available";
@@ -27,13 +30,17 @@ class Slot extends Component {
                 className = "closed";
             }
             let onclick = this.openMeetingForm;
+            let title = false;
             if (mine) {
                 className = "mine";
                 onclick = () => {
                 };
+                title = "Создатель встречи: " + mineMeet.creator.name + " " + mineMeet.creator.surname + "\n";
+                title += "Приглашенный: " + mineMeet.guest.name + " " + mineMeet.guest.surname + "\n";
+                title += "Статус: " + ((mineMeet.status == 0) ? "Ожидает ответа" : (mineMeet.status == 1) ? "Принята" : "Отклонена") + "\n";
             }
             slotBody =
-                <div className={className} onClick={onclick}>
+                <div title={title} className={className} onClick={onclick}>
                     {slot.meets.length + " из 10"}
                 </div>;
         } else {

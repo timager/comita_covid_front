@@ -11,7 +11,7 @@ class UserForm extends Component {
 
     constructor(props) {
         super(props);
-        this.state = Object.assign({access: false}, this.props.user);
+        this.state = Object.assign({access: false, air:false, airport:false, transport:false}, {isAdmin: this.props.user ? this.props.user.role === "ROLE_ADMIN" : false}, this.props.user);
         this.saveHandler = this.saveHandler.bind(this);
     }
 
@@ -52,6 +52,30 @@ class UserForm extends Component {
                     <input type={"checkbox"} checked={this.state.access}
                            onChange={e => {
                                this.setState({access: e.target.checked})
+                           }}/>
+                </label>
+                <label className={"access_label"}>Администратор?
+                    <input type={"checkbox"} checked={this.state.isAdmin}
+                           onChange={e => {
+                               this.setState({isAdmin: e.target.checked})
+                           }}/>
+                </label>
+                <label className={"access_label"}>авиакомпании
+                    <input type={"checkbox"} checked={this.state.air}
+                           onChange={e => {
+                               this.setState({air: e.target.checked})
+                           }}/>
+                </label>
+                <label className={"access_label"}>аэропорты
+                    <input type={"checkbox"} checked={this.state.airport}
+                           onChange={e => {
+                               this.setState({airport: e.target.checked})
+                           }}/>
+                </label>
+                <label className={"access_label"}>поток: грузовой транспорт
+                    <input type={"checkbox"} checked={this.state.transport}
+                           onChange={e => {
+                               this.setState({transport: e.target.checked})
                            }}/>
                 </label>
                 <div>
