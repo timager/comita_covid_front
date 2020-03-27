@@ -65,76 +65,7 @@ class HomePage extends Component {
         </div>
 
         <div class="div_3">
-            <div class="tabs" id="tabs">
-                <div class="c-tabs-nav flex">
-                    <div class="c-tabs-nav__link is-active">
-                        <div class="container">
-                            <h3>OVERCOMING COVID-19 FOR TRANSPORT INDUSTRY</h3>
-                            <div class="img">
-                                <img src="img/img-1.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="c-tabs-nav__link">
-                        <div class="container">
-                            <h3>OVERCOMING COVID-19 FOR AIR TRANSPORT AND TOURISM INDUSTRY</h3>
-                            <div class="img">
-                                <img src="img/img-2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="c-tab tab-1 is-active">
-                    <div class="video">
-                        <div class="container">
-<!--                            <iframe src="" frameborder="0"></iframe>-->
-                            <div class="img">
-                                <img src="img/video_bg.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chat">
-                        <div class="container">
-                            <div class="title center">
-                                <h2>Ask your questions in live</h2>
-                                <span></span>
-                                <h2>Chat</h2>
-                            </div>
-                            <div class="block">
-                                <div class="img">
-                                    <img src="img/chat_icon.png" alt="">
-                                </div>
-                                <h4>Live questions from you</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="c-tab tab-2">
-                    <div class="video">
-                        <div class="container">
-<!--                            <iframe src="" frameborder="0"></iframe>-->
-                            <div class="img">
-                                <img src="img/video_bg.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chat">
-                        <div class="container">
-                            <div class="title center">
-                                <h2>Ask your questions in live</h2>
-                                <span></span>
-                                <h2>Chat</h2>
-                            </div>
-                            <div class="block">
-                                <div class="img">
-                                    <img src="img/chat_icon.png" alt="">
-                                </div>
-                                <h4>Live questions from you</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+             <iframe src="/frames/tabs-en.html" class="crutch_frame"></iframe>
         </div>
         
         <div class="div_4">

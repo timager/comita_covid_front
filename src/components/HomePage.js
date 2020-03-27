@@ -63,76 +63,7 @@ class HomePage extends Component {
         </div>
 
         <div class="div_3">
-            <div class="tabs" id="tabs">
-                <div class="c-tabs-nav flex">
-                    <div class="c-tabs-nav__link is-active">
-                        <div class="container">
-                            <h3>Преодоление <span>COVID-19</span> для индустрии транспорта</h3>
-                            <div class="img">
-                                <img src="img/img-1.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="c-tabs-nav__link">
-                        <div class="container">
-                            <h3>Преодоление COVID-19 для  воздушного транспорта и индустрии туризма</h3>
-                            <div class="img">
-                                <img src="img/img-2.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="c-tab tSab-1 is-active">
-                    <div class="video">
-                        <div class="container">
-<!--                            <iframe src="" frameborder="0"></iframe>-->
-                            <div class="img">
-                                <img src="img/video_bg.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chat">
-                        <div class="container">
-                            <div class="title center">
-                                <h2>Задавайте ваши вопросы в прямом эфире</h2>
-                                <span></span>
-                                <h2>ЧАТ</h2>
-                            </div>
-                            <div class="block">
-                                <div class="img">
-                                    <img src="img/chat_icon.png" alt="">
-                                </div>
-                                <h4>вопросы в прямом эфире от вас</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="c-tab tab-2">
-                    <div class="video">
-                        <div class="container">
-<!--                            <iframe src="" frameborder="0"></iframe>-->
-                            <div class="img">
-                                <img src="img/video_bg.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chat">
-                        <div class="container">
-                            <div class="title center">
-                                <h2>Задавайте ваши вопросы в прямом эфире</h2>
-                                <span></span>
-                                <h2>ЧАТ</h2>
-                            </div>
-                            <div class="block">
-                                <div class="img">
-                                    <img src="img/chat_icon.png" alt="">
-                                </div>
-                                <h4>вопросы в прямом эфире от вас</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <iframe src="/frames/tabs.html" class="crutch_frame"></iframe>
         </div>
         
         <div class="div_4">

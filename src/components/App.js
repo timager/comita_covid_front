@@ -39,6 +39,12 @@ function App() {
                     <Route exact path="/login">
                         <LoginPage/>
                     </Route>
+                    <Route exact path="/en">
+                        <HomePageEn/>
+                    </Route>
+                    <Route path="/meetings">
+                        <MeetingsPage currentUser={{id:1}}/>
+                    </Route>
                     <Security>{
                         user => {
                             return (<>

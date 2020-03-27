@@ -1,0 +1,9 @@
+.hcc.hc__messages {
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+.tabs{
+    height: 2200px;
+    overflow-y: hidden;
+}

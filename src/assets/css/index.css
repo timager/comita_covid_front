@@ -21,6 +21,11 @@ body {
     font-weight: bold;
 }
 
-body.react-confirm-alert-body-element{
+body.react-confirm-alert-body-element {
     overflow: auto;
+}
+
+.crutch_frame {
+    width: 100%;
+    height: 2200px;
 }
