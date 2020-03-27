@@ -11,6 +11,8 @@ import MyModal from "./MyModal";
 import MeetingsPage from "./MeetingsPage";
 import Security from "./Security";
 import HomePageEn from "./HomePageEn";
+import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
+
 
 // const staticContent = `
 //         <!-- Yandex.Metrika counter -->
@@ -39,22 +41,15 @@ function App() {
                     <Route exact path="/login">
                         <LoginPage/>
                     </Route>
-                    <Route exact path="/en">
-                        <HomePageEn/>
-                    </Route>
-                    <Route exact path="/">
-                        <HomePage/>
-                    </Route>
-                    <Route path="/meetings">
-                        <MeetingsPage currentUser={{id:1}}/>
-                    </Route>
                     <Security>{
                         user => {
                             return (<>
                                 <Route exact path="/">
+                                    <ScrollUpButton/>
                                     <HomePage/>
                                 </Route>
                                 <Route exact path="/en">
+                                    <ScrollUpButton/>
                                     <HomePageEn/>
                                 </Route>
                                 <Route path="/users">
