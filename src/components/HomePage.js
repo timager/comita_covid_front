@@ -189,8 +189,11 @@ class HomePage extends Component {
                 <img src="img/logo2.png" alt="">
             </div>
             <div class="contacts">
-                <a href="tel:7(495)108-514" class="phone">7(495)108-514</a>
-                <a href="mailto:events@ato.ru">events@ato.ru</a>
+               <p style="text-align: center;"><strong><a href="https://www.events.ato.ru/" target="_blank" rel="noopener">ATO Events</a></strong></p>
+<p style="text-align: center;"><span style="font-size: 14px;"><a href="https://www.events.ato.ru/upload/FILES/processing_policy_ru.pdf" target="_blank" rel="noopener">Политика обработки персональных данных</a></span><br>
+<span style="font-size: 14px;"> <a href="https://www.events.ato.ru/upload/FILES/privacy_policy_ru.pdf" target="_blank" rel="noopener">Политика конфиденциальности</a></span></p>
+<p style="text-align: center;"><span style="font-size: 20px;">+7 495 108-51-43</span></p>
+
             </div>
         </div>
     </footer>
