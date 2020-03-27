@@ -42,6 +42,9 @@ function App() {
                     <Route exact path="/en">
                         <HomePageEn/>
                     </Route>
+                    <Route exact path="/">
+                        <HomePage/>
+                    </Route>
                     <Route path="/meetings">
                         <MeetingsPage currentUser={{id:1}}/>
                     </Route>
