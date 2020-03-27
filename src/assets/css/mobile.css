@@ -3,6 +3,10 @@
         margin-bottom: 20px;
     }
 
+    .login_page .header {
+        text-align: center;
+    }
+
     .user_form {
         width: initial;
     }
@@ -47,6 +51,10 @@
         padding-right: 30px;
     }
 
+    .meetings_page .header {
+        text-align: center;
+    }
+
     .react-confirm-alert-body {
         width: 250px;
     }
@@ -54,5 +62,9 @@
     .user_form label {
         width: auto;
         flex-wrap: wrap;
+    }
+
+    .f_large {
+        font-size: 30px;
     }
 }

@@ -38,7 +38,7 @@ class HomePage extends Component {
 
         <div class="div_1">
             <div class="container">
-            <a style="margin: 15px 15px 15px 95%; color: white" href="/api/logout">Выйти</a>
+            <a style="margin: 15px 15px 15px 85%; color: white" href="/api/logout">Выйти</a>
             </div>
         </div>
            
@@ -171,7 +171,7 @@ class HomePage extends Component {
                             <p>особых требований нет. Zoom работает и через мобильный интернет.</p>
                         </div>
                         <div class="item">
-                            <h4>Какая-то особая подготовка нужна к встрече?</h4>
+                            <h4>Можно ли получить запись переговоров?</h4>
                             <p>Если вы хотите получить запись, Вам необходимо перед встречей предупредить об этом организатора. При общем согласии обеих сторон, запись будет произведена.</p>
                         </div>
                     </div>

@@ -38,7 +38,7 @@ class HomePage extends Component {
 
         <div class="div_1">
             <div class="container">
-            <a style="margin: 15px 15px 15px 95%; color: white" href="/api/logout">Log out</a>
+            <a style="margin: 15px 15px 15px 85%; color: white" href="/api/logout">Logout</a>
             </div>
         </div>
            
@@ -143,7 +143,7 @@ class HomePage extends Component {
                     <img src="img/logo.png" alt="">
                 </div>
                 <div class="title center">
-                    <h2>Organization of one-to-one meeting online meetings</h2>
+                    <h2>Organization of one-to-one online meetings</h2>
                     <a href="/meetings">
                     <button class="button center">Reserve here</button>
                     </a>
