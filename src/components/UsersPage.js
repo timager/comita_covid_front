@@ -34,7 +34,7 @@ class UsersPage extends Component {
 
         let users = '';
         if (this.state.users == null) {
-            users = <Loader type="Oval" width={200} height={200}/>;
+            users = <Loader type="Oval" width={200} height={200} color="#ffc80b"/>;
         } else {
             users = this.state.users.map(user => <UserPreview key={user['id']} user={user} loadUsers={this.loadUsers}/>)
         }

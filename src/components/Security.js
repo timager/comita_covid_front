@@ -26,7 +26,7 @@ class Security extends Component {
         if(this.state.user){
             return this.props.children(this.state.user)
         }else{
-            return <Loader type="Oval" width={200} height={200}/>
+            return <Loader type="Oval" width={200} height={200} color="#ffc80b"/>
         }
     }
 }

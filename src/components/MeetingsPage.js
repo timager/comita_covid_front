@@ -28,7 +28,7 @@ class MeetingsPage extends Component {
     render() {
         let slots = '';
         if (this.state.slots == null) {
-            slots = <Loader type="Oval" width={200} height={200}/>;
+            slots = <Loader type="Oval" width={200} height={200} color="#ffc80b" />;
         } else {
             slots = this.state.slots.map(slot => <Slot currentUser={this.props.currentUser} key={slot['id']} slot={slot} currentUser={this.props.currentUser}
                                                        loadSlots={this.loadSlots}/>)

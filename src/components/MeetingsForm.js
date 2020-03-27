@@ -44,7 +44,7 @@ class MeetingsForm extends Component {
     }
 
     render() {
-        let select = <Loader type="Oval" width={200} height={50}/>;
+        let select = <Loader type="Oval" width={200} height={50} color="#ffc80b"/>;
         if (this.state.users) {
             select = <select onChange={event => {this.setState({companion: event.target.value})}}>
                 {this.state.users.map((user, id) => {return <UserSelectOption user={user}/>})}
