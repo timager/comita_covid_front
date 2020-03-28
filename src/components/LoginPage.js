@@ -11,6 +11,8 @@ class LoginPage extends Component {
     constructor(props) {
         super(props);
         this.loginClick = this.loginClick.bind(this);
+        this.openRecoveryModal = this.openRecoveryModal.bind(this);
+        this.sendRecovery = this.sendRecovery.bind(this);
         this.state = {
             login: null,
             pass: null
@@ -51,16 +53,59 @@ class LoginPage extends Component {
                 window.location.href = "/";
             })
             .catch(
-                e => {console.log(e);   confirmAlert({
-                    title: 'Ошибка авторизации',
-                    message: "Неверные данные для входа",
-                    buttons: [
-                        {
-                            label: 'Ок'
-                        }
-                    ]
-                })}
+                e => {
+                    console.log(e);
+                    confirmAlert({
+                        title: 'Ошибка авторизации',
+                        message: "Неверные данные авторизации",
+                        childrenElement: () => <p onClick={this.openRecoveryModal}
+                                                  className={"recovery_pass"}>Восстановить данные для входа</p>,
+                        buttons: [
+                            {
+                                label: 'Ок'
+                            }
+                        ]
+                    })
+                }
             )
+    }
+
+    openRecoveryModal() {
+        confirmAlert({
+                title: 'Восстановление данных',
+                message: "Введите ваш email",
+                childrenElement: () => <Input className={"border_blue"} onChange={e => this.setState({login: e.target.value})} type={"email"}/>,
+                buttons: [
+                    {
+                        label: "Отправить",
+                        onClick: this.sendRecovery
+                    },
+                    {
+                        label: "Отмена"
+                    }
+                ]
+            }
+        )
+    }
+
+    sendRecovery() {
+        axios.post(BASE_URL + "/api/users/repair/" + this.state.login).then(res =>
+            confirmAlert({
+                title: "Восстановление",
+                message: "Письмо для восстановления данных отправлено на почту",
+                buttons: [
+                    {label: "Ок"}
+                ]
+            })
+        ).catch(e =>
+            confirmAlert({
+                title: "Ошибка",
+                message: "Не удалось отправить письмо (" + e.response.data + ")",
+                buttons: [
+                    {label: "Ок"}
+                ]
+            })
+        )
     }
 }
 

@@ -28,3 +28,17 @@
     margin-top: 20px;
     margin-bottom: 100px;
 }
+
+.recovery_pass {
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.recovery_pass:hover {
+    text-decoration: underline;
+}
+
+.border_blue{
+    border: 1px solid var(--blue) !important;
+    width: auto!important;
+}
