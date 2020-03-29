@@ -56,10 +56,10 @@ class LoginPage extends Component {
                 e => {
                     console.log(e);
                     confirmAlert({
-                        title: 'Ошибка авторизации',
-                        message: "Неверные данные авторизации",
+                        title: 'Authentication error',
+                        message: "Incorrect login or password",
                         childrenElement: () => <p onClick={this.openRecoveryModal}
-                                                  className={"recovery_pass"}>Восстановить данные для входа</p>,
+                                                  className={"recovery_pass"}>Recover the data</p>,
                         buttons: [
                             {
                                 label: 'Ок'
