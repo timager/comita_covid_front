@@ -57,7 +57,7 @@ class HomePage extends Component {
                 <div class="text center">
                     <h1>Преодоление COVID-19  для индустрии транспорта</h1>
                     <a target="_blank"
-                       href="http://live.covid-transport.ru/symfony/public/Covid-2020-rus.pdf"><button class="button center">программа конференции</button></a>
+                       href="https://drive.google.com/file/d/1l8BmkXH1NeYyE3pllyHXZ0jrycakL1ZB/view?usp=sharing"><button class="button center">программа конференции</button></a>
                 </div>
             </div>
         </div>

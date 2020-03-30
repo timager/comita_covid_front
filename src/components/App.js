@@ -11,7 +11,8 @@ import MyModal from "./MyModal";
 import MeetingsPage from "./MeetingsPage";
 import Security from "./Security";
 import HomePageEn from "./HomePageEn";
-import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
+import ScrollUpButton from "react-scroll-up-button";
+import AdminSecurity from "./AdminSecurity"; //Add this line Here
 
 
 // const staticContent = `
@@ -41,6 +42,12 @@ function App() {
                     <Route exact path="/login">
                         <LoginPage/>
                     </Route>
+
+                    <Route path="/users">
+                        <AdminSecurity>
+                            {(user) => {return (<UsersPage/>)}}
+                        </AdminSecurity>
+                    </Route>
                     <Security>{
                         user => {
                             return (<>
@@ -51,9 +58,6 @@ function App() {
                                 <Route exact path="/en">
                                     <ScrollUpButton/>
                                     <HomePageEn/>
-                                </Route>
-                                <Route path="/users">
-                                    <UsersPage/>
                                 </Route>
                                 <Route path="/meetings">
                                     <MeetingsPage currentUser={user}/>
@@ -66,7 +70,8 @@ function App() {
             </Router>
             {/*<div dangerouslySetInnerHTML={{__html: staticContent}}/>*/}
         </>
-    );
+    )
+        ;
 }
 
 export default App;

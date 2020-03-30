@@ -57,7 +57,7 @@ class HomePage extends Component {
                 <div class="text center">
                     <h1>OVERCOMING COVID-19 FOR TRANSPORT INDUSTRY</h1>
                     <a target="_blank"
-                       href="https://drive.google.com/file/d/14w65KzhvwObg2WSFKKSohpVRlYWwHxdF/view?usp=sharing">
+                       href="https://drive.google.com/drive/folders/1_WOkQlOed4nLdSKkUcko-rd-sJVUVVst">
                     <button class="button center">Agenda</button>
                     </a>
                 </div>
